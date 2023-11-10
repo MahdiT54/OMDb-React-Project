@@ -1,7 +1,10 @@
 import React from "react";
-import Undrawmovie from "../assets/undraw_movie_night_re_9umk.svg"
+import Undrawmovie from "../assets/undraw_movie_night_re_9umk.svg";
+import { useNavigate } from "react-router-dom";
 
 const Landing = () => {
+
+
   return (
     <section id="landing">
       <header>
@@ -13,7 +16,7 @@ const Landing = () => {
             <h2 className="header__description--h2">Search and Go</h2>
             <div className="browser__engine">
               <input id="search__list" type="text" placeholder="Browse..." />
-              <div id="api-button" onclick="findMovies()">
+              <div id="api-button">
                 Go
               </div>
             </div>

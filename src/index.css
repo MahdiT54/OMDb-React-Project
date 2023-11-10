@@ -287,3 +287,26 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
+
+.movies__container {
+  background-color: black;
+}
+
+.movies__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.movie-card {
+  width: 250px;
+}
+
+.search-item-img {
+  width: 100%;
+}
+
+.search-item-info {
+  text-align: center;
+}

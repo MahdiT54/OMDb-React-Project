@@ -114,6 +114,7 @@ header {
 }
 
 .header__description--h1 {
+  text-align: center;
   font-size: 64px;
   margin-bottom: 24px;
   color: rgb(0, 129, 112);
@@ -151,7 +152,12 @@ header {
   margin: 0 auto;
 }
 
+.header__img {
+  width: 100%;
+}
+
 .browser__engine {
+  margin: 0 auto;
   width: 100%;
   max-width: 600px;
   position: relative;
@@ -262,11 +268,6 @@ header {
 
 footer {
   background: rgb(15, 15, 15);
-  background: linear-gradient(
-    180deg,
-    rgba(15, 15, 15, 1) 0%,
-    rgba(35, 45, 63, 1) 94%
-  );
 }
 
 .divider {
@@ -290,13 +291,16 @@ footer {
 
 .movies__container {
   background-color: black;
+  min-height: calc(100vh - 211px);
 }
 
-.movies__row {
+.movies__box {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .movie-card {

@@ -9,7 +9,7 @@ const Nav = () => {
         <Link to="/" className="logo__link">
           <div className="nav__logo">
             <h1>
-              Movie<span className="teal-gradient">Go</span>
+              OMDb<span className="teal-gradient">Go</span>
             </h1>
           </div>
         </Link>

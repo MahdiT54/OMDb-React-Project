@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer__wrap">
         <div className="nav__logo">
           <h1>
-            Movie<span className="teal-gradient">Go</span>
+            OMDb<span className="teal-gradient">Go</span>
           </h1>
         </div>
         <p className="footer__p">© 2023 MovieGo All Rights Reserved</p>

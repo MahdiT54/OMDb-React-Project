@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 
 const Searchbox = () => {
@@ -33,7 +34,7 @@ const Searchbox = () => {
     <div className="browser__engine">
       <input id="search__list" type="text" placeholder="Browse..." />
       <div id="api-button" onClick={handleButtonClick}>
-        {noResults ? <h2>Empty</h2> : <h2>Go</h2>}
+        {noResults ? <FontAwesomeIcon icon="fa-solid fa-question" /> : <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />}
       </div>
     </div>
   );

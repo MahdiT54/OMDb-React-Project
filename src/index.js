@@ -4,9 +4,17 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faFacebook, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
+import {
+  faFacebook,
+  faTwitter,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
+import {
+  faQuestion,
+  faMagnifyingGlass,
+} from "@fortawesome/free-solid-svg-icons";
 
-library.add(faFacebook, faTwitter, faGithub);
+library.add(faFacebook, faTwitter, faGithub, faQuestion, faMagnifyingGlass);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

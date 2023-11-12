@@ -196,25 +196,29 @@ header {
 #api-button {
   display: flex;
   align-items: center;
+  justify-content: center;
   position: absolute;
   cursor: pointer;
   top: 0;
   bottom: 0;
   right: 0;
   z-index: 10000;
-  padding: 8px;
-  font-size: 32px;
+  font-size: 28px;
+  width: 3.75rem;
   transition: all 0.1s ease;
-  background-color: #008170;
-  border: 4px solid #008170;
-  border-radius: 999px;
+  background-color: #232D3F;
+  box-shadow: #232D3F 0px 3px 8px;
+  border-radius: 99px;
 }
 
 #api-button:hover,
 .nav__link:hover {
   background-color: #005b41;
-  border: 6px solid #005b41;
   box-shadow: #005b41 0px 3px 8px;
+}
+
+#api-button:active {
+  font-size: 24px;
 }
 
 #about {
@@ -305,9 +309,12 @@ footer {
 }
 
 .footer__social--wrap {
-  padding: 0.5rem;
+  width: 2rem;
   border-radius: 999px;
   transition: all .2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .fort__Icon {
@@ -315,8 +322,8 @@ footer {
   font-size: 1.5rem;
 }
 
-.footer__social--wrap:hover {
-  box-shadow: #005b41 0px 3px 8px;
+.fort__Icon:hover {
+  font-size: 1.75rem;
 }
 
 .movies__container {

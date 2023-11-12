@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
 const Footer = () => {
@@ -17,21 +18,30 @@ const Footer = () => {
             target="_blank"
             className="footer__social--wrap"
           >
-            Facebook
+            <FontAwesomeIcon
+              icon="fa-brands fa-facebook"
+              className="fort__Icon"
+            />
           </a>
           <a
             href="https://twitter.com/"
             target="_blank"
             className="footer__social--wrap"
           >
-            Twitter
+            <FontAwesomeIcon
+              icon="fa-brands fa-twitter"
+              className="fort__Icon"
+            />
           </a>
           <a
             href="https://github.com/MahdiT54"
             target="_blank"
             className="footer__social--wrap"
           >
-            Github
+            <FontAwesomeIcon
+              icon="fa-brands fa-github"
+              className="fort__Icon"
+            />
           </a>
         </div>
       </div>

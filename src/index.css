@@ -4,6 +4,16 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+svg {
   color: white;
 }
 
@@ -238,6 +248,7 @@ header {
 }
 
 .about__h2 {
+  text-align: center;
   font-size: 48px;
   font-weight: 900;
   letter-spacing: 0.025em;
@@ -287,6 +298,25 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.footer__socials {
+  display: flex;
+}
+
+.footer__social--wrap {
+  padding: 0.5rem;
+  border-radius: 999px;
+  transition: all .2s ease;
+}
+
+.fort__Icon {
+  color: #008170;
+  font-size: 1.5rem;
+}
+
+.footer__social--wrap:hover {
+  box-shadow: #005b41 0px 3px 8px;
 }
 
 .movies__container {

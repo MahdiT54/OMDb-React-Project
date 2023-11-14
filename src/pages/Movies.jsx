@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Notfound from "../assets/image_not_found.png";
 import Searchbox from "../components/Searchbox";
 import { useLocation } from "react-router-dom";
 
@@ -27,7 +28,7 @@ const Movies = () => {
                 <div className="movie-card__container">
                   <div className="search-item-thumbnail">
                     <img
-                      src={movie.Poster}
+                      src={movie.Poster !== "N/A" ? movie.Poster : Notfound}
                       className="search-item-img"
                       alt="movie poster"
                     />

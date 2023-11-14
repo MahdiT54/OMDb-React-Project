@@ -343,13 +343,12 @@ footer {
 
 .movie-card {
   width: 15.625rem;
-  margin: .6rem;
+  margin: 0.6rem;
 }
 
 .search-item-img {
   width: 100%;
   height: 100%;
-
 }
 
 .search-item-info {
@@ -361,4 +360,11 @@ footer {
   width: 13rem;
   height: 18rem;
   margin: 0 auto;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.search-item-thumbnail:hover {
+  scale: 98%;
 }

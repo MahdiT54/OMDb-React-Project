@@ -15,7 +15,7 @@ const Movies = () => {
   } else {
     console.log("Movies found! Spliced movies: ", movies);
   }
-  
+
   return (
     <div className="container movies__container">
       <div className="row movies__row">
@@ -25,18 +25,16 @@ const Movies = () => {
             movies.map((movie) => (
               <div className="movie-card" key={movie.imdbID}>
                 <div className="movie-card__container">
-                  <div className="movie-poster">
-                    <div className="search-item-thumbnail">
-                      <img
-                        src={movie.Poster}
-                        className="search-item-img"
-                        alt="movie poster"
-                      />
-                    </div>
-                    <div className="search-item-info">
-                      <h3 className="search-item-h3">{movie.Title}</h3>
-                      <p className="search-item-p">{movie.Year}</p>
-                    </div>
+                  <div className="search-item-thumbnail">
+                    <img
+                      src={movie.Poster}
+                      className="search-item-img"
+                      alt="movie poster"
+                    />
+                  </div>
+                  <div className="search-item-info">
+                    <h3 className="search-item-h3">{movie.Title}</h3>
+                    <p className="search-item-p">{movie.Year}</p>
                   </div>
                 </div>
               </div>

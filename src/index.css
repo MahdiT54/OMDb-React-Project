@@ -320,10 +320,11 @@ footer {
 .fort__Icon {
   color: #008170;
   font-size: 1.5rem;
+  transition: all .1s ease;
 }
 
 .fort__Icon:hover {
-  font-size: 1.75rem;
+  font-size: 1.4rem;
 }
 
 .movies__container {

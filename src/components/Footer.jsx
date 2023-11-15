@@ -11,7 +11,7 @@ const Footer = () => {
             OMDb<span className="teal-gradient">Go</span>
           </h1>
         </div>
-        <p className="footer__p">© 2023 MovieGo All Rights Reserved</p>
+        <p className="footer__p">© 2023 OMDbGo All Rights Reserved</p>
         <div className="footer__socials">
           <a
             href="https://www.facebook.com/"

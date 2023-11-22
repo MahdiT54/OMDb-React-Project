@@ -24,7 +24,7 @@ const Movies = () => {
         <div className="movies__box">
           {movies.length > 0 ? (
             movies.map((movie) => (
-              <div className="movie-card" key={movie.imdbID}>
+              <div className="movie-card" key={movie.imdbID} onClick={() => console.log('ey o')}>
                 <div className="movie-card__container">
                   <div className="search-item-thumbnail">
                     <img

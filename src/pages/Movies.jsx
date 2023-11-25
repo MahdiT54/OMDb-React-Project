@@ -27,7 +27,7 @@ const Movies = () => {
               <div className="movie-card" key={movie.imdbID} onClick={() => console.log('ey o')}>
                 <div className="movie-card__container">
                   <div className="search-item-thumbnail">
-                    <img
+                    <im
                       src={movie.Poster !== "N/A" ? movie.Poster : Notfound}
                       className="search-item-img"
                       alt="movie poster"

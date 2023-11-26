@@ -18,40 +18,42 @@ const Movies = () => {
   }
 
   return (
-    <div className="container movies__container">
-      <div className="row movies__row">
-        <Searchbox />
-        <div className="movies__box">
-          {movies.length > 0 ? (
-            movies.map((movie) => (
-              <Link to={`/movies/${movie.imdbID}`}>
-                <div
-                  className="movie-card"
-                  key={movie.imdbID}
-                  onClick={() => console.log("ey o")}
-                >
-                  <div className="movie-card__container">
-                    <div className="search-item-thumbnail">
-                      <img
-                        src={movie.Poster !== "N/A" ? movie.Poster : Notfound}
-                        className="search-item-img"
-                        alt="movie poster"
-                      />
-                    </div>
-                    <div className="search-item-info">
-                      <h3 className="search-item-h3">{movie.Title}</h3>
-                      <p className="search-item-p">{movie.Year}</p>
+    <section id="movies">
+      <div className="container movies__container">
+        <div className="row movies__row">
+          <Searchbox />
+          <div className="movies__box">
+            {movies.length > 0 ? (
+              movies.map((movie) => (
+                <Link to={`/movies/${movie.imdbID}`}>
+                  <div
+                    className="movie-card"
+                    key={movie.imdbID}
+                    onClick={() => console.log("ey o")}
+                  >
+                    <div className="movie-card__container">
+                      <div className="search-item-thumbnail">
+                        <img
+                          src={movie.Poster !== "N/A" ? movie.Poster : Notfound}
+                          className="search-item-img"
+                          alt="movie poster"
+                        />
+                      </div>
+                      <div className="search-item-info">
+                        <h3 className="search-item-h3">{movie.Title}</h3>
+                        <p className="search-item-p">{movie.Year}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Link>
-            ))
-          ) : (
-            <h2>{`You searched for "${searchTerm}" - No movies found.`}</h2>
-          )}
+                </Link>
+              ))
+            ) : (
+              <h2>{`You searched for "${searchTerm}" - No movies found.`}</h2>
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

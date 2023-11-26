@@ -345,6 +345,7 @@ footer {
 .movie-card {
   width: 15.625rem;
   margin: 0.6rem;
+  cursor: pointer;
 }
 
 .search-item-img {

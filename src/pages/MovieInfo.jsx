@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -58,7 +59,7 @@ const MovieInfo = () => {
           <p className="awards">
             <b>
               {" "}
-              <i className="fas fa-award"></i>
+              <FontAwesomeIcon icon="fa-solid fa-award" />
             </b>{" "}
             {movieInfo.Awards}
           </p>

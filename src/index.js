@@ -12,9 +12,10 @@ import {
 import {
   faQuestion,
   faMagnifyingGlass,
+  faAward,
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faFacebook, faTwitter, faGithub, faQuestion, faMagnifyingGlass);
+library.add(faFacebook, faTwitter, faGithub, faQuestion, faMagnifyingGlass, faAward);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

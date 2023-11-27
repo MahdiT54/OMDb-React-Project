@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Roboto:wght@300;400;500;700;900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,14 +7,13 @@
   font-family: "Roboto", sans-serif;
 }
 
+body,
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
 p,
-svg {
+ul,
+li {
   color: white;
 }
 
@@ -85,10 +85,6 @@ nav {
   transition: all 0.1s ease;
 }
 
-/* .nav__link:hover {
-  border: 2px solid #005B41;
-} */
-
 .nav__list {
   margin-left: 16px;
   display: flex;
@@ -96,7 +92,9 @@ nav {
   justify-content: center;
 }
 
-/*  LANDING */
+/* .nav__link:hover {
+  border: 2px solid #005B41;
+} */
 
 #landing {
   background: rgb(15, 15, 15);
@@ -132,12 +130,6 @@ header {
   font-size: 64px;
   margin-bottom: 24px;
   color: rgb(0, 129, 112);
-  color: linear-gradient(
-    30deg,
-    rgba(0, 129, 112, 1) 0%,
-    rgba(0, 91, 65, 1) 41%,
-    rgba(35, 45, 63, 1) 90%
-  );
   text-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
@@ -151,12 +143,6 @@ header {
 
 .header__description--h2 {
   color: rgb(0, 129, 112);
-  color: linear-gradient(
-    236deg,
-    rgba(0, 129, 112, 1) 0%,
-    rgba(0, 91, 65, 1) 53%,
-    rgba(35, 45, 63, 1) 79%
-  );
 }
 
 .header__img--wrapper {
@@ -238,9 +224,16 @@ header {
   padding: 130px 0;
 }
 
-.teal-gradient {
+.features {
   color: rgb(0, 129, 112);
-  color: linear-gradient(
+  text-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.teal-gradient {
+  border-radius: 0.4rem;
+  color: rgb(0, 129, 112);
+  background: linear-gradient(
     30deg,
     rgba(0, 129, 112, 1) 0%,
     rgba(0, 91, 65, 1) 41%,
@@ -324,7 +317,7 @@ footer {
 .fort__Icon {
   color: #008170;
   font-size: 1.5rem;
-  transition: all .1s ease;
+  transition: all 0.1s ease;
 }
 
 .fort__Icon:hover {
@@ -373,4 +366,76 @@ footer {
 
 .search-item-thumbnail:hover {
   scale: 98%;
+}
+
+#movie__info {
+  background-color: #fff;
+  min-height: calc(100vh - 211px);
+  display: flex;
+  align-items: center;
+}
+
+.movie-details-container {
+  background-color: #fff;
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px;
+  overflow: hidden;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.movie-poster {
+  flex: 1;
+}
+
+.movie-poster img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.movie-info {
+  flex: 2;
+  padding: 20px;
+}
+
+.movie-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.movie-misc-info {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.movie-misc-info li {
+  display: inline-block;
+  margin-right: 15px;
+  color: #555;
+}
+
+.genre,
+.writer,
+.actors,
+.plot,
+.language,
+.awards {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.b {
+  font-weight: bold;
+}
+
+.fa-award {
+  color: #008170;
+  margin-right: 5px;
 }

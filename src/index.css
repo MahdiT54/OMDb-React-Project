@@ -439,3 +439,31 @@ footer {
   color: #008170;
   margin-right: 5px;
 }
+
+.fa-circle-notch {
+  font-size: 4rem;
+  color: #008170;
+}
+
+.loading__container {
+  min-height: calc(100vh - 211px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

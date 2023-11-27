@@ -18,7 +18,13 @@ const MovieInfo = () => {
   }, [id]);
 
   if (!movieInfo) {
-    return <div>Loading...</div>; // or any loading indicator
+    return (
+      <div className="loading__container">
+        <div className="loading">
+          <FontAwesomeIcon icon="fa-solid fa-circle-notch" />
+        </div>
+      </div>
+    );
   }
 
   return (

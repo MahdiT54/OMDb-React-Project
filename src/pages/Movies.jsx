@@ -2,14 +2,26 @@ import React, { useEffect, useState } from "react";
 import Notfound from "../assets/image_not_found.png";
 import Searchbox from "../components/Searchbox";
 import { Link, useLocation } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Movies = () => {
   const location = useLocation();
+  const [loading, setLoading] = useState(true);
   const movies =
     location.state && location.state.movies
       ? location.state.movies.slice(0, 6)
       : [];
   const searchTerm = location.state && location.state.searchTerm;
+
+  useEffect(() => {
+    setLoading(true);
+
+    const delay = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(delay); // avoid memory leaks cleanup
+  }, [searchTerm]);
 
   if (movies.length == 0) {
     console.log("No movies found.");
@@ -23,7 +35,13 @@ const Movies = () => {
         <div className="row movies__row">
           <Searchbox />
           <div className="movies__box">
-            {movies.length > 0 ? (
+            {loading ? (
+              <div className="loading__container">
+                <div className="loading">
+                  <FontAwesomeIcon icon="fa-solid fa-circle-notch" />
+                </div>
+              </div>
+            ) : movies.length > 0 ? (
               movies.map((movie) => (
                 <Link to={`/movies/${movie.imdbID}`}>
                   <div

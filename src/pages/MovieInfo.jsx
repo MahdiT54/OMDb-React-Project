@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Rating from "../components/ui/Rating";
 
 const MovieInfo = () => {
   const { id } = useParams();
@@ -42,6 +43,7 @@ const MovieInfo = () => {
         </div>
         <div className="movie-info">
           <h3 className="movie-title">{movieInfo.Title}</h3>
+          <Rating rating={movieInfo.imdbRating} />
           <ul className="movie-misc-info">
             <li className="year">Year: {movieInfo.Year}</li>
             <li className="rated">Ratings: {movieInfo.Rated}</li>

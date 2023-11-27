@@ -467,3 +467,12 @@ footer {
     transform: rotate(360deg);
   }
 }
+
+.fa-star,
+.fa-star-half-stroke {
+  color: #005b41;
+}
+
+.book__ratings {
+  margin-bottom: 15px;
+}

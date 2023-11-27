@@ -14,6 +14,8 @@ import {
   faMagnifyingGlass,
   faAward,
   faCircleNotch,
+  faStar,
+  faStarHalfStroke,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -23,7 +25,9 @@ library.add(
   faQuestion,
   faCircleNotch,
   faMagnifyingGlass,
-  faAward
+  faAward,
+  faStar,
+  faStarHalfStroke
 );
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

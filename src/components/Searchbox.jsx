@@ -33,13 +33,13 @@ const Searchbox = () => {
   return (
     <div className="browser__engine">
       <input id="search__list" type="text" placeholder="Browse..." />
-      <div id="api-button" onClick={handleButtonClick}>
+      <button id="api-button" onClick={handleButtonClick}>
         {noResults ? (
           <FontAwesomeIcon icon="fa-solid fa-question" />
         ) : (
           <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
         )}
-      </div>
+      </button>
     </div>
   );
 };

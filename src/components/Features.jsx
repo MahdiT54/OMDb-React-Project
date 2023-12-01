@@ -1,6 +1,6 @@
 import React from "react";
 
-const About = () => {
+const Features = () => {
   return (
     <section id="about">
       <div className="divider"></div>
@@ -10,7 +10,7 @@ const About = () => {
             <span className="features">Features</span>
           </h5>
           <h2 className="about__h2">
-            Movie Data from <span className="teal-gradient">OMDb API</span>
+            Movie Data from <span className="teal-gradient about-h2">OMDb API</span>
           </h2>
           <p className="about__p">
             Unlock easy accessibility to movie data with the simple search of a
@@ -29,4 +29,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Features;

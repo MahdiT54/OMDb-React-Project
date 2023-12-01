@@ -1,12 +1,12 @@
 import React from "react";
 import Landing from "../components/Landing";
-import About from "../components/About";
+import Features from "../components/Features";
 
 const Home = () => {
   return (
     <>
       <Landing />
-      <About />
+      <Features />
     </>
   );
 };

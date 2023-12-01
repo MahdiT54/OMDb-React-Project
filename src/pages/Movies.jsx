@@ -9,7 +9,7 @@ const Movies = () => {
   const [loading, setLoading] = useState(true);
   const movies =
     location.state && location.state.movies
-      ? location.state.movies.slice(0, 6)
+      ? location.state.movies.slice(0, 9)
       : [];
   const searchTerm = location.state && location.state.searchTerm;
 
@@ -18,7 +18,7 @@ const Movies = () => {
 
     const delay = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 1500);
 
     return () => clearTimeout(delay); // avoid memory leaks cleanup
   }, [searchTerm]);

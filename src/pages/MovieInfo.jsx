@@ -7,18 +7,23 @@ import Rating from "../components/ui/Rating";
 const MovieInfo = () => {
   const { id } = useParams();
   const [movieInfo, setMovieInfo] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchMovieInfo = async () => {
-      const response = await axios.get(
-        `https://www.omdbapi.com/?i=${id}&apikey=1c44ead`
-      );
-      setMovieInfo(response.data);
+      const loadingTimer = setTimeout(async () => {
+        const response = await axios.get(
+          `https://www.omdbapi.com/?i=${id}&apikey=1c44ead`
+        );
+        setMovieInfo(response.data);
+        setIsLoading(false);
+      }, 1500);
+      return () => clearTimeout(loadingTimer);
     };
     fetchMovieInfo();
   }, [id]);
 
-  if (!movieInfo) {
+  if (isLoading) {
     return (
       <div className="loading__container">
         <div className="loading">

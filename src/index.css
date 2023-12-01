@@ -184,6 +184,7 @@ header {
 }
 
 #api-button {
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -196,14 +197,16 @@ header {
   font-size: 28px;
   width: 3.75rem;
   transition: all 0.1s ease;
-  background-color: #232d3f;
+  background-color: #fff;
   box-shadow: #232d3f 0px 3px 8px;
   border-radius: 99px;
+  color: #232d3f;
 }
 
 #api-button:hover,
 .nav__link:hover {
   background-color: #005b41;
+  color: #fff;
   box-shadow: #005b41 0px 3px 8px;
 }
 
@@ -218,6 +221,14 @@ header {
     rgba(35, 45, 63, 1) 11%,
     rgba(15, 15, 15, 1) 88%
   );
+}
+
+.about-h2 {
+  transition: all .2s ease;
+}
+
+.about-h2:hover {
+  letter-spacing: .5rem;
 }
 
 .row-1 {
@@ -475,4 +486,49 @@ footer {
 
 .book__ratings {
   margin-bottom: 15px;
+}
+
+/* AboutPage.css */
+
+.about-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.app-name {
+  font-size: 2em;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.commitment-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.commitment-list div {
+  flex: 1;
+  margin-right: 20px;
 }

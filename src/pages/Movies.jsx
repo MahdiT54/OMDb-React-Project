@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Notfound from "../assets/image_not_found.png";
 import Searchbox from "../components/Searchbox";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Movies = () => {
+  let navigate = useNavigate();
   const location = useLocation();
   const [loading, setLoading] = useState(true);
   const movies =
@@ -34,6 +35,9 @@ const Movies = () => {
       <div className="container movies__container">
         <div className="row movies__row">
           <Searchbox />
+          <button className="back-btn" onClick={() => navigate("/")}>
+            ← Back
+          </button>
           <div className="movies__box">
             {loading ? (
               <div className="loading__container">

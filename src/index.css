@@ -358,7 +358,7 @@ footer {
   flex-wrap: wrap;
   max-width: 900px;
   margin: 0 auto;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 .movie-card {
@@ -611,4 +611,17 @@ footer {
   justify-content: center;
   padding: 24px 0 0;
   margin: 16px 0 0;
+}
+
+.back-btn {
+  margin: 36px auto 0;
+  color: #005b41;
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 110px;
 }

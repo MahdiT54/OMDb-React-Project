@@ -1,10 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Rating from "../components/ui/Rating";
 
 const MovieInfo = () => {
+  const navigate = useNavigate();
   const { id } = useParams();
   const [movieInfo, setMovieInfo] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -35,6 +36,9 @@ const MovieInfo = () => {
 
   return (
     <section id="movie__info" className="up__padding">
+      <button className="back-btn back__movie-info" onClick={() => navigate("/")}>
+        ← Back
+      </button>
       <div className="movie-details-container">
         <div className="movie-poster">
           <img

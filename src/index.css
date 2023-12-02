@@ -615,8 +615,6 @@ footer {
 
 .back-btn {
   margin: 36px auto 0;
-  color: #005b41;
-  background-color: #fff;
   border: none;
   border-radius: 10px;
   padding: 5px 10px;
@@ -624,4 +622,14 @@ footer {
   font-weight: 600;
   cursor: pointer;
   width: 110px;
+}
+
+.back__movies {
+  color: #005b41;
+  background-color: #fff;
+}
+
+.back__movie-info {
+  color: #005b41;
+  background-color: #fff;
 }

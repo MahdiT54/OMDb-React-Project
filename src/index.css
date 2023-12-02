@@ -37,15 +37,22 @@ li {
   list-style-type: none;
 }
 
+.up__padding {
+  padding-top: 80px;
+}
+
 nav {
   height: 80px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
   background-color: #0f0f0f;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
 .row {
   display: flex;
-  flex-direction: column;
   max-width: 1200px;
   width: 100%;
   padding: 96px 0;
@@ -106,7 +113,7 @@ nav {
 }
 
 header {
-  height: calc(100vh - 80px);
+  height: calc(100vh);
 }
 
 .header__container {
@@ -193,7 +200,7 @@ header {
   top: 0;
   bottom: 0;
   right: 0;
-  z-index: 10000;
+  z-index: 500;
   font-size: 28px;
   width: 3.75rem;
   transition: all 0.1s ease;
@@ -214,7 +221,7 @@ header {
   font-size: 24px;
 }
 
-#about {
+#features {
   background: rgb(35, 45, 63);
   background: linear-gradient(
     180deg,
@@ -224,15 +231,17 @@ header {
 }
 
 .about-h2 {
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 
 .about-h2:hover {
-  letter-spacing: .5rem;
+  cursor: pointer;
+  letter-spacing: 0.5rem;
 }
 
 .row-1 {
   padding: 130px 0;
+  flex-direction: column;
 }
 
 .features {
@@ -321,14 +330,13 @@ footer {
   border-radius: 999px;
   transition: all 0.2s ease;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .fort__Icon {
   color: #008170;
   font-size: 1.5rem;
   transition: all 0.1s ease;
+  text-align: center;
 }
 
 .fort__Icon:hover {
@@ -336,8 +344,7 @@ footer {
 }
 
 .movies__container {
-  /* background-color: black; */
-  min-height: calc(100vh - 211px);
+  min-height: calc(100vh - 131px);
 }
 
 .movies__box {
@@ -381,7 +388,7 @@ footer {
 
 #movie__info {
   background-color: #fff;
-  min-height: calc(100vh - 211px);
+  min-height: calc(100vh - 131px);
   display: flex;
   align-items: center;
 }
@@ -457,7 +464,7 @@ footer {
 }
 
 .loading__container {
-  min-height: calc(100vh - 211px);
+  min-height: calc(100vh - 131px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -486,4 +493,48 @@ footer {
 
 .book__ratings {
   margin-bottom: 15px;
+}
+
+#about__page {
+  min-height: calc(100vh - 131px);
+}
+
+.about-row {
+  flex-direction: column;
+  padding: 64px 0 0;
+  border-bottom: 1px solid #005b41;
+}
+
+.about__header--left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__header--left-h1 {
+  font-size: 48px;
+  text-align: center;
+  font-weight: 900;
+  line-height: 1.25;
+  letter-spacing: 0.025em;
+}
+
+.about__header--left-p {
+  font-size: 18px;
+  margin: 16px 0 0;
+  color: #7c8ba1;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.625;
+  max-width: 800px;
+}
+
+.about__header--right {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.about__header--right-img {
+  width: 500px;
 }

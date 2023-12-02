@@ -30,7 +30,7 @@ const Movies = () => {
   }
 
   return (
-    <section id="movies">
+    <section id="movies" className="up__padding">
       <div className="container movies__container">
         <div className="row movies__row">
           <Searchbox />

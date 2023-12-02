@@ -34,7 +34,7 @@ const MovieInfo = () => {
   }
 
   return (
-    <section id="movie__info">
+    <section id="movie__info" className="up__padding">
       <div className="movie-details-container">
         <div className="movie-poster">
           <img

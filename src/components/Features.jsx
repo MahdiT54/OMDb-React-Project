@@ -2,7 +2,7 @@ import React from "react";
 
 const Features = () => {
   return (
-    <section id="about">
+    <section id="features">
       <div className="divider"></div>
       <div className="row row-1">
         <div className="container">

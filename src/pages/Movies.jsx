@@ -35,7 +35,10 @@ const Movies = () => {
       <div className="container movies__container">
         <div className="row movies__row">
           <Searchbox />
-          <button className="back-btn back__movies" onClick={() => navigate("/")}>
+          <button
+            className="back-btn back__movies"
+            onClick={() => navigate("/")}
+          >
             ← Back
           </button>
           <div className="movies__box">
@@ -48,11 +51,7 @@ const Movies = () => {
             ) : movies.length > 0 ? (
               movies.map((movie) => (
                 <Link to={`/movies/${movie.imdbID}`}>
-                  <div
-                    className="movie-card"
-                    key={movie.imdbID}
-                    onClick={() => console.log("ey o")}
-                  >
+                  <div className="movie-card" key={movie.imdbID}>
                     <div className="movie-card__container">
                       <div className="search-item-thumbnail">
                         <img

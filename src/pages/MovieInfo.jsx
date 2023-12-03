@@ -36,14 +36,17 @@ const MovieInfo = () => {
 
   return (
     <section id="movie__info" className="up__padding">
-      <button className="back-btn back__movie-info" onClick={() => navigate("/")}>
+      <button
+        className="back-btn back__movie-info"
+        onClick={() => navigate("/movies")}
+      >
         ← Back
       </button>
       <div className="movie-details-container">
         <div className="movie-poster">
           <img
             src={
-              movieInfo.Poster !== "N/A"
+              movieInfo.enPoster !== "N/A"
                 ? movieInfo.Poster
                 : "./assets/image_not_found.png"
             }

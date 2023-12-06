@@ -627,6 +627,16 @@ footer {
 .back__movies {
   color: #005b41;
   background-color: #fff;
+  transition: all .1s ease;
+}
+
+.back__movies:hover {
+  color: #fff;
+  background-color: #005b41;
+}
+
+.back__movies:active {
+  scale: .97;
 }
 
 .back__movie-info {

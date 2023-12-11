@@ -37,7 +37,7 @@ const About = () => {
           </p>
         </div>
         <figure className="interface__right">
-          <img src={Undrawinterface} alt="" />
+          <img src={Undrawinterface} className="interface__right--img" alt="" />
         </figure>
       </div>
       <div className="row responsive__row">
@@ -50,7 +50,7 @@ const About = () => {
           </p>
         </div>
         <figure className="responsive__right">
-          <img src={Undrawwebdevices} alt="" />
+          <img src={Undrawwebdevices} className="response__right--img" alt="" />
         </figure>
       </div>
     </section>

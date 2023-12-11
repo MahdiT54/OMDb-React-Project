@@ -4,7 +4,7 @@ import Features from "../components/Features";
 
 const Home = () => {
   return (
-    <div className="up__padding">
+    <div className="content">
       <Landing />
       <Features />
     </div>

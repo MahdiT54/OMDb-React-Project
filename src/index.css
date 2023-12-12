@@ -80,7 +80,8 @@ nav {
 /* Nav */
 
 .nav__scroll {
-  opacity: 0.95;
+  background-color: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
 }
 
 .nav__container {
@@ -387,7 +388,7 @@ footer END
 
 
 .movies__row {
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 211px);
   padding-top: 12px;
 }
 
@@ -407,9 +408,16 @@ footer END
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-  max-width: 900px;
+  max-width: 1200px;
+  max-height: 570px;
   margin: 0 auto;
   margin-top: 1rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.movies__box::-webkit-scrollbar {
+  display: none;
 }
 
 .movie-card {

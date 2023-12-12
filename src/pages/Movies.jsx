@@ -10,7 +10,7 @@ const Movies = () => {
   const [loading, setLoading] = useState(true);
   const movies =
     location.state && location.state.movies
-      ? location.state.movies.slice(0, 9)
+      ? location.state.movies.slice(0, 16)
       : [];
   const searchTerm = location.state && location.state.searchTerm;
 

@@ -2,26 +2,26 @@ import React from "react";
 
 const Features = () => {
   return (
-    <section id="features">
+    <section id="features" className="features">
       <div className="divider"></div>
-      <div className="row row-1">
-        <div className="container">
-          <h5 className="about__h5">
-            <span className="features">Features</span>
+      <div className="row row__features">
+        <div className="container container__features">
+          <h5 className="features__h5">
+            Features
           </h5>
-          <h2 className="about__h2">
-            Movie Data from <span className="teal-gradient about-h2">OMDb API</span>
+          <h2 className="features__h2">
+            Movie Data from <span className="teal-gradient features-h2">OMDb API</span>
           </h2>
-          <p className="about__p">
+          <p className="features__p">
             Unlock easy accessibility to movie data with the simple search of a
             movie title
           </p>
           <a
             href="https://www.omdbapi.com/"
             target="_blank"
-            className="button__design"
+            className="features__more-info"
           >
-            OMDb API
+            More Info
           </a>
         </div>
       </div>

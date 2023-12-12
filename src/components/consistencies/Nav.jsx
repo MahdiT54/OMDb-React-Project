@@ -1,10 +1,24 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Nav = () => {
+  const [show, handleShow] = useState(false);
+
+  const transitionNavBar = () => {
+    if (window.scrollY > 100) {
+      handleShow(true);
+    } else {
+      handleShow(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", transitionNavBar); // as we scroll, its going to trigger transitionNavBar
+    return () => window.removeEventListener("scroll", transitionNavBar);
+  }, []);
+
   return (
-    <nav>
+    <nav className={`${show && "nav__scroll"}`}>
       <div className="nav__container">
         <Link to="/" className="logo__link">
           <div className="nav__logo">

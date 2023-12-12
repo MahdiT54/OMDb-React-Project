@@ -6,17 +6,17 @@ import Searchbox from "./Searchbox";
 const HeroSection = () => {
   return (
     <section id="hero" className="hero">
-      <div className="row">
+      <div className="row hero_row">
         <div className="container hero__container">
-          <div className="header__description">
-            <h1 className="header__description--h1">
+          <div className="hero__description">
+            <h1 className="hero__description--h1">
               Reliable Up-to-date Movie Database
             </h1>
-            <h2 className="header__description--h2">Search and Go</h2>
+            <h2 className="hero__description--h2">Search and Go</h2>
             <Searchbox />
           </div>
-          <figure className="header__img--wrapper">
-            <img className="header-img" src={Undrawmovie} alt="" />
+          <figure className="hero__img--wrapper">
+            <img className="hero-img" src={Undrawmovie} alt="" />
           </figure>
         </div>
       </div>

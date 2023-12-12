@@ -31,16 +31,18 @@ const Movies = () => {
   }
 
   return (
-    <section id="movies" className="up__padding">
-      <div className="container movies__container">
-        <div className="row movies__row">
-          <Searchbox />
-          <button
-            className="back-btn back__movies"
-            onClick={() => navigate("/")}
-          >
-            ← Back
-          </button>
+    <section id="movies" className="movies">
+      <div className="row movies__row">
+        <div className="container movies__container">
+          <div className="movie__remote">
+            <button
+              className="back-btn back__movies"
+              onClick={() => navigate("/")}
+            >
+              ← Back
+            </button>
+            <Searchbox />
+          </div>
           <div className="movies__box">
             {loading ? (
               <div className="loading__container">

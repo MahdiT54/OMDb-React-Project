@@ -3,11 +3,11 @@ import Undrawmovie from "../assets/undraw_movie_night_re_9umk.svg";
 import { useNavigate } from "react-router-dom";
 import Searchbox from "./Searchbox";
 
-const Landing = () => {
+const HeroSection = () => {
   return (
-    <section id="landing">
-      <header>
-        <div className="header__container">
+    <section id="hero" className="hero">
+      <div className="row">
+        <div className="container hero__container">
           <div className="header__description">
             <h1 className="header__description--h1">
               Reliable Up-to-date Movie Database
@@ -19,9 +19,9 @@ const Landing = () => {
             <img className="header-img" src={Undrawmovie} alt="" />
           </figure>
         </div>
-      </header>
+      </div>
     </section>
   );
 };
 
-export default Landing;
+export default HeroSection;

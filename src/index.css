@@ -53,17 +53,20 @@ nav {
 
 .row {
   display: flex;
+  justify-content: center;
   max-width: 1200px;
-  width: 100%;
-  padding: 96px 0;
   margin: 0 auto;
+  height: 100%;
 }
 
 .container {
-  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px dotted grey;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: center; */
 }
 
 .nav__container {
@@ -103,25 +106,16 @@ nav {
   border: 2px solid #005B41;
 } */
 
-#landing {
-  background: rgb(15, 15, 15);
+.hero {
   background: linear-gradient(
     180deg,
     rgba(15, 15, 15, 1) 0%,
     rgba(35, 45, 63, 1) 94%
   );
-}
-
-header {
   height: calc(100vh - 80px);
 }
 
-.header__container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  height: 100%;
-  display: flex;
+.hero__container {
   flex-direction: column;
   justify-content: space-around;
 }

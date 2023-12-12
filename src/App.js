@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Footer from "./components/Footer";
-import Nav from "./components/Nav";
+import Footer from "./components/consistencies/Footer";
+import Nav from "./components/consistencies/Nav";
 import Home from "./pages/Home";
 import Movies from "./pages/Movies";
 import MovieInfo from "./pages/MovieInfo";
@@ -10,6 +10,8 @@ function App() {
   return (
     <Router>
       <div className="App">
+        {/* // <Nav /> & <Footer /> are outside of
+         ROUTES (CONSISTENT) */}
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />

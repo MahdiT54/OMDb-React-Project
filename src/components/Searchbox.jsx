@@ -11,7 +11,7 @@ const Searchbox = () => {
   const handleButtonClick = async () => {
     const searchListValue = document.getElementById("search__list").value;
     setSearchTerm(searchListValue); // useState searchTerm is set to the value inside search__list
-    const apiUrl = `http://www.omdbapi.com/?apikey=1c44ead&s=${searchListValue}`;
+    const apiUrl = `https://www.omdbapi.com/?apikey=1c44ead&s=${searchListValue}`;
 
     const response = await axios.get(apiUrl);
     const data = response.data;

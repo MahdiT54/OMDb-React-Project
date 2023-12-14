@@ -3,6 +3,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Rating from "../components/ui/Rating";
+import Notfound from "../assets/image_not_found.png";
 
 const MovieInfo = () => {
   const navigate = useNavigate();
@@ -40,9 +41,9 @@ const MovieInfo = () => {
         <div className="movie-poster">
           <img
             src={
-              movieInfo.enPoster !== "N/A"
+              movieInfo.Poster !== "N/A"
                 ? movieInfo.Poster
-                : "./assets/image_not_found.png"
+                : Notfound
             }
             alt="movie poster"
           />

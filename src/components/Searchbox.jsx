@@ -16,7 +16,7 @@ const Searchbox = () => {
     const response = await axios.get(apiUrl);
     const data = response.data;
 
-    if (searchListValue != "") {
+    if (searchListValue !== "") {
       setNoResults(false);
       navigate("/movies", {
         state: { movies: data.Search, searchTerm: searchListValue },

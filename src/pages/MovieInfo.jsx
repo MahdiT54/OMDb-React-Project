@@ -27,7 +27,7 @@ const MovieInfo = () => {
 
   if (isLoading) {
     return (
-      <div className="loading__container">
+      <div className="loading__container--info">
         <div className="loading">
           <FontAwesomeIcon icon="fa-solid fa-circle-notch" />
         </div>
@@ -36,7 +36,7 @@ const MovieInfo = () => {
   }
 
   return (
-    <section id="movie__info" className="up__padding">
+    <section id="movie__info">
       <div className="movie-details-container">
         <div className="movie-poster">
           <img

@@ -10,7 +10,7 @@ const Movies = () => {
   const [loading, setLoading] = useState(true);
   const movies =
     location.state && location.state.movies
-      ? location.state.movies.slice(0, 16)
+      ? location.state.movies.slice(0, 8)
       : [];
   const searchTerm = location.state && location.state.searchTerm;
 
@@ -24,7 +24,7 @@ const Movies = () => {
     return () => clearTimeout(delay); // avoid memory leaks cleanup
   }, [searchTerm]);
 
-  if (movies.length == 0) {
+  if (movies.length === 0) {
     console.log("No movies found.");
   } else {
     console.log("Movies found! Spliced movies: ", movies);

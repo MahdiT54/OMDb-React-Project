@@ -411,7 +411,6 @@ footer END
   max-width: 1200px;
   max-height: 570px;
   margin: 0 auto;
-  margin-top: 1rem;
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -450,6 +449,7 @@ footer END
 }
 
 #movie__info {
+  padding-top: 80px;
   background-color: #fff;
   min-height: calc(100vh - 131px);
   display: flex;
@@ -527,16 +527,21 @@ footer END
 }
 
 .loading__container {
-  min-height: calc(100vh - 131px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 570px;
+}
+
+.loading__container--info {
+  height: calc(100vh - 131px);
+  padding-top: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .loading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   animation: spin 0.75s ease-in-out infinite;
 }
 

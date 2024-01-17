@@ -25,6 +25,11 @@ const Movies = () => {
     return () => clearTimeout(delay); // avoid memory leaks cleanup
   }, [searchTerm]);
 
+  useEffect(() => {
+    // it uppdates moviesDefault when a new search term is received
+    setMoviesDefault((movies));
+  }, [movies, searchTerm]);
+
   if (movies.length === 0) {
     console.log("No movies found.");
   } else {
@@ -33,7 +38,7 @@ const Movies = () => {
 
   function filterMovies(filter) {
     console.log(filter);
-    let sortedMovies = [...moviesDefault]; // made a copy of the original movies array
+    let sortedMovies = [...moviesDefault]; // Create a copy of the original movies array
 
     if (filter === "LOW_TO_HIGH") {
       sortedMovies = sortedMovies.sort((a, b) => a.Year - b.Year);

@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
-import Notfound from "../assets/image_not_found.png";
 import Searchbox from "../components/Searchbox";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Movie from "../components/ui/Movie";
 
-const Movies = () => {
+const Movies = ({ moviesdefault: initialMovies }) => {
+  const [moviesdefault, setMoviesdefault] = useState(initialMovies);
   let navigate = useNavigate();
   const location = useLocation();
   const [loading, setLoading] = useState(true);
+
   const movies =
     location.state && location.state.movies
       ? location.state.movies.slice(0, 8)
@@ -30,6 +32,36 @@ const Movies = () => {
     console.log("Movies found! Spliced movies: ", movies);
   }
 
+  function filterMovies(filter) {
+    console.log(filter);
+
+    const extractNumericYear = (year) => parseInt(year.replace(/\D/g, ""), 10);
+
+    if (filter === "LOW_TO_HIGH") {
+      setMoviesdefault(
+        moviesdefault
+          .slice()
+          .sort(
+            (a, b) => extractNumericYear(a.Year) - extractNumericYear(b.Year)
+          )
+      );
+    }
+    if (filter === "HIGH_TO_LOW") {
+      setMoviesdefault(
+        moviesdefault
+          .slice()
+          .sort(
+            (a, b) => extractNumericYear(b.Year) - extractNumericYear(a.Year)
+          )
+      );
+    }
+    if (filter === "RATING") {
+      setMoviesdefault(
+        moviesdefault.slice().sort((a, b) => b.imdbRating - a.imdbRating)
+      );
+    }
+  }
+
   return (
     <section id="movies" className="movies">
       <div className="row movies__row">
@@ -41,7 +73,21 @@ const Movies = () => {
             >
               ← Back
             </button>
-            <Searchbox />
+            <div className="row browser__engine--row">
+              <Searchbox />
+              <select
+                id="filter"
+                defaultValue="DEFAULT"
+                onChange={(event) => filterMovies(event.target.value)}
+              >
+                <option value="DEFAULT" disabled>
+                  Sort
+                </option>
+                <option value="LOW_TO_HIGH">Year, Low to High</option>
+                <option value="HIGH_TO_LOW">Year, High to Low</option>
+                <option value="RATING">Rating</option>
+              </select>
+            </div>
           </div>
           <div className="movies__box">
             {loading ? (
@@ -51,25 +97,11 @@ const Movies = () => {
                 </div>
               </div>
             ) : movies.length > 0 ? (
-              movies.map((movie) => (
-                <Link to={`/movies/${movie.imdbID}`}>
-                  <div className="movie-card" key={movie.imdbID}>
-                    <div className="movie-card__container">
-                      <div className="search-item-thumbnail">
-                        <img
-                          src={movie.Poster !== "N/A" ? movie.Poster : Notfound}
-                          className="search-item-img"
-                          alt="movie poster"
-                        />
-                      </div>
-                      <div className="search-item-info">
-                        <h3 className="search-item-h3">{movie.Title}</h3>
-                        <p className="search-item-p">{movie.Year}</p>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              ))
+              movies.map(
+                (
+                  movie // movies array --> (movie) element
+                ) => <Movie movie={movie} key={movie.imdbID} />
+              )
             ) : (
               <h2>{`You searched for "${searchTerm}" - No movies found.`}</h2>
             )}

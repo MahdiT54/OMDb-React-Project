@@ -736,3 +736,7 @@ About START
   color: #005b41;
   background-color: #fff;
 }
+
+.browser__engine--row {
+  width: 100%;
+}

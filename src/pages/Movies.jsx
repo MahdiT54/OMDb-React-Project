@@ -4,17 +4,16 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Movie from "../components/ui/Movie";
 
-const Movies = ({ moviesdefault: initialMovies }) => {
-  const [moviesdefault, setMoviesdefault] = useState(initialMovies);
-  let navigate = useNavigate();
+const Movies = () => {
   const location = useLocation();
-  const [loading, setLoading] = useState(true);
-
   const movies =
     location.state && location.state.movies
       ? location.state.movies.slice(0, 8)
       : [];
   const searchTerm = location.state && location.state.searchTerm;
+  const [moviesDefault, setMoviesDefault] = useState(movies);
+  let navigate = useNavigate();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setLoading(true);
@@ -34,17 +33,19 @@ const Movies = ({ moviesdefault: initialMovies }) => {
 
   function filterMovies(filter) {
     console.log(filter);
+    let sortedMovies = [...moviesDefault]; // made a copy of the original movies array
+
     if (filter === "LOW_TO_HIGH") {
-      setMoviesdefault(moviesdefault.slice().sort((a, b) => a.Year.slice() - b.Year));
+      sortedMovies = sortedMovies.sort((a, b) => a.Year - b.Year);
     }
     if (filter === "HIGH_TO_LOW") {
-      setMoviesdefault(moviesdefault.slice().sort((a, b) => b.Year - a.Year));
+      sortedMovies = sortedMovies.sort((a, b) => b.Year - a.Year);
     }
     if (filter === "RATING") {
-      setMoviesdefault(
-        moviesdefault.slice().sort((a, b) => b.imdbRating - a.imdbRating)
-      );
+      sortedMovies = sortedMovies.sort((a, b) => b.imdbRating - a.imdbRating);
     }
+
+    setMoviesDefault(sortedMovies);
   }
 
   return (
@@ -78,14 +79,12 @@ const Movies = ({ moviesdefault: initialMovies }) => {
             {loading ? (
               <div className="loading__container">
                 <div className="loading">
-                  <FontAwesomeIcon icon="fa-solid fa-circle-notch" />
+                  <FontAwesomeIcon icon="circle-notch" spin />
                 </div>
               </div>
-            ) : movies.length > 0 ? (
-              movies.map(
-                (
-                  movie // movies array --> (movie) element
-                ) => <Movie movie={movie} key={movie.imdbID} />
+            ) : moviesDefault.length > 0 ? (
+              moviesDefault.map(
+                (movie) => <Movie movie={movie} key={movie.imdbID} />
               )
             ) : (
               <h2>{`You searched for "${searchTerm}" - No movies found.`}</h2>

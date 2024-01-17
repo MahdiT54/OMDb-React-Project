@@ -34,26 +34,11 @@ const Movies = ({ moviesdefault: initialMovies }) => {
 
   function filterMovies(filter) {
     console.log(filter);
-
-    const extractNumericYear = (year) => parseInt(year.replace(/\D/g, ""), 10);
-
     if (filter === "LOW_TO_HIGH") {
-      setMoviesdefault(
-        moviesdefault
-          .slice()
-          .sort(
-            (a, b) => extractNumericYear(a.Year) - extractNumericYear(b.Year)
-          )
-      );
+      setMoviesdefault(moviesdefault.slice().sort((a, b) => a.Year.slice() - b.Year));
     }
     if (filter === "HIGH_TO_LOW") {
-      setMoviesdefault(
-        moviesdefault
-          .slice()
-          .sort(
-            (a, b) => extractNumericYear(b.Year) - extractNumericYear(a.Year)
-          )
-      );
+      setMoviesdefault(moviesdefault.slice().sort((a, b) => b.Year - a.Year));
     }
     if (filter === "RATING") {
       setMoviesdefault(
